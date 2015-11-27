@@ -1,0 +1,28 @@
+#################################################################
+#
+#	Author: Junxian XU
+#
+#	App: Private Weibo Dev
+#
+#  	Version: 0.9.1
+#
+#	Data: 2013.05.01 - 2013.07.01
+##################################################################
+
+1. This project is an Eclipse Project, use Eclipse IDE to open it
+
+
+2. Feature List:
+
+	1. Auth2.0 Authentication login
+	2. View twitters, comment twitters, transfer twitters, Add Favorite List
+	3. Support Pictures uploading with text 
+	4. Support pictures viewing, support single-finger zoom-in zoom-out functionalities
+	5. Support sqliteDataBase, store Blob images into db
+	6. 
+
+3. TBD 
+	1. need to fix large picture
+
+
+4. bin folder contains the APK file, U can download it and install it on your device

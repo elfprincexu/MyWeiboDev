@@ -19,10 +19,11 @@
 	3. Support Pictures uploading with text 
 	4. Support pictures viewing, support single-finger zoom-in zoom-out functionalities
 	5. Support sqliteDataBase, store Blob images into db
-	6. 
+	
 
 3. TBD 
-	1. need to fix large picture
+	1. need to fix large picture uploading memory large issue
+	2. viewList slow down when handling heavy-load twitters
 
 
 4. bin folder contains the APK file, U can download it and install it on your device

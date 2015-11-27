@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/weibo_bg" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3px"
+        android:background="@color/transparent" >
+
+        <ImageButton
+            android:id="@+id/returnBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8px"
+            android:src="@drawable/return_flash"
+            android:background="@drawable/btn_bg" >
+        </ImageButton>
+        
+        <TextView
+            android:id="@+id/showName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="阅读微博"
+            android:textColor="#343434"
+            android:textSize="28px" >
+        </TextView>
+
+<!--         <ImageButton -->
+<!--             android:id="@+id/homeBtn" -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_alignParentRight="true" -->
+<!--             android:layout_marginLeft="12px" -->
+<!--             android:src="@drawable/weibo_view_home" -->
+<!--             android:background="@drawable/btn_bg"  > -->
+<!--         </ImageButton> -->
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/user_row_detials"
+        android:layout_width="fill_parent"
+        android:layout_height="78px"
+        android:paddingLeft="15px"
+        android:paddingTop="8px"
+        android:paddingRight="15px"
+        android:background="@drawable/image_shape" 
+        >
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/user_icon" 
+            android:layout_marginTop="5px"
+            android:layout_marginLeft="5px"
+            >
+        </ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5px"
+            android:layout_marginRight="5px"
+            android:src="@drawable/go_into"
+             >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:layout_toRightOf="@+id/user_icon"
+            android:gravity="left|center_vertical"
+            android:textColor="@color/blueviolet"
+            android:textSize="28px" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/menu_layout"
+            android:paddingBottom="15px"
+            android:paddingLeft="27px"
+            android:paddingRight="27px" 
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="22px" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/pic"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </ImageView>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+             <ProgressBar
+                android:id="@+id/loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center" >
+            </ProgressBar>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loading"
+                android:layout_gravity="center"
+                android:text="正在载入"
+                android:textColor="#9c9c9c"
+                android:textSize="12px" >
+            </TextView>
+        </LinearLayout>
+	
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/weibo_home_divider"
+        android:layout_above="@id/menu_layout" >
+    	</LinearLayout>
+        
+        <TableLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5px"
+            android:gravity="center"
+            android:background="@color/transparent" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10px"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/btn_gz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转发(0)"
+                    android:textColor="#3882b8"
+                    android:drawableLeft="@drawable/weibo_zhuanfa"
+                    android:textSize="25px" >
+                </Button>
+
+                <Button
+                    android:id="@+id/btn_pl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/weibo_image_comments"
+                    android:text="评论(0)"
+                    android:textColor="#3882b8"
+                    android:textSize="25px" >
+                </Button>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <Button
+                    android:id="@+id/refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/refresh"
+                    android:text="刷新"
+                    android:textColor="#3882b8"
+                    android:textSize="25px" >
+                </Button>
+
+                <Button
+                    android:id="@+id/favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/weibo_favorites"
+                    android:text="收藏"
+                    android:textColor="#3882b8"
+                    android:textSize="25px" >
+                </Button>
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</LinearLayout>

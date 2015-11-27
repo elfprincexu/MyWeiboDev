@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/weibo_top_bg" >
+
+        <ImageButton
+            android:id="@+id/returnBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8px"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/return_flash" >
+        </ImageButton>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="浏览图片"
+            android:textColor="#343434"
+            android:textSize="28px"
+            android:textStyle="bold" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/downBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/weibo_save" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/image_shape" >
+
+        <com.sonyericsson.zoom.ImageZoomView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/pic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/image_bg" >
+        </com.sonyericsson.zoom.ImageZoomView>
+
+        <ZoomControls
+            android:id="@+id/zoomCtrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" >
+        </ZoomControls>
+    </RelativeLayout>
+
+</LinearLayout>

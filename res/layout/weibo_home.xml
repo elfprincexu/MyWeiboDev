@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/weibo_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent" >
+
+<!--         <ImageView -->
+<!--             android:layout_width="wrap_content" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:src="@drawable/weibo_logo" > -->
+<!--         </ImageView> -->
+
+        <TextView
+            android:id="@+id/showName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#343434"
+            android:text="我的微薄首页"
+            android:textSize="25px" >
+        </TextView>
+
+        <ImageButton
+            android:id="@+id/writeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="8px"
+            android:background="@drawable/btn_bg"
+            style="@style/main_tab_bottom"
+            android:src="@drawable/write" >
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/refreshBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="12px"
+            android:layout_margin="8px"
+            android:background="@drawable/btn_bg"
+            style="@style/main_tab_bottom"
+            android:src="@drawable/refresh" >
+        </ImageButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="@color/transparent" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/Msglist"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/toolbarLayout"
+            android:layout_margin="0px"
+            android:background="@drawable/image_shape"
+            android:cacheColorHint="#00000000"
+            android:divider="@drawable/weibo_home_divider"
+            android:dividerHeight="2px"
+            android:fastScrollEnabled="true"
+            
+            android:focusable="true" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <ProgressBar
+                android:id="@+id/loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center" >
+            </ProgressBar>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/loading"
+                android:layout_gravity="center"
+                android:text="....正在载入 ...."
+                android:textColor="#9c9c9c"
+                android:textSize="18px" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true" 
+            android:background="@color/transparent">
+
+            <RadioGroup
+                android:id="@+id/tab_group"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="bottom"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" 
+				>
+                <!-- 第一个标签，注意button属性设置成null，以此去掉自带的radio button -->
+                <!-- 注意：id="@id/tab1"，为什么不是+id呢？这个和加载先后有关系,Google一下吧 -->
+
+                <RadioButton
+                    android:id="@+id/weibo_index"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginTop="2.0dip"
+                    android:drawableTop="@drawable/home"
+                    android:tag="tab1"
+                    android:background="@drawable/btn_bg"
+                    android:text="首页" />
+
+                <RadioButton
+                    android:id="@+id/weibo_message"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginTop="2.0dip"
+                    android:drawableTop="@drawable/weibo_messages"
+                    android:background="@drawable/btn_bg"
+                    android:tag="tab2"
+                    android:text="信息" />
+
+                <RadioButton
+                    android:id="@+id/weibo_userInfo"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginTop="2.0dip"
+                    android:drawableTop="@drawable/weibo_user"
+                    android:background="@drawable/btn_bg"
+                    android:tag="tab3"
+                    android:text="资料" />
+
+                <RadioButton
+                    android:id="@+id/weibo_search"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginTop="2.0dip"
+                    android:drawableTop="@drawable/weibo_search"
+                    android:background="@drawable/btn_bg"
+                    android:tag="tab4"
+                    android:text="搜素" />
+
+                <RadioButton
+                    android:id="@+id/weibo_more"
+                    style="@style/main_tab_bottom"
+                    android:layout_marginTop="2.0dip"
+                    android:drawableTop="@drawable/weibo_more"
+                    android:background="@drawable/btn_bg"
+                    android:tag="tab5"
+                    android:text="更多" />
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

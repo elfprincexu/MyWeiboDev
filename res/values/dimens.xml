@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="button_height">45.0dip</dimen>
+    <dimen name="bottom_tab_font_size">10.0dip</dimen>
+    <dimen name="bottom_tab_padding_up">2.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="switch_logo_bottom_padding">30.0sp</dimen>
+    
+    <dimen name="dialog_left_margin">10dp</dimen>
+	<dimen name="dialog_top_margin">30dp</dimen>
+	<dimen name="dialog_right_margin">10dp</dimen>
+	<dimen name="dialog_bottom_margin">10dp</dimen>		
+	<dimen name="dialog_btn_close_right_margin">10dp</dimen>
+	<dimen name="dialog_btn_close_top_margin">10dp</dimen>
+	<dimen name="dialog_title_logo_left_margin">5dp</dimen>
+	<dimen name="dialog_title_height">30dp</dimen>	
+</resources>

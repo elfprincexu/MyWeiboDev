@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/wbicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8px"
+        android:src="@drawable/user_icon" >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5px"
+        android:layout_marginTop="5px"
+        android:orientation="vertical"
+        android:paddingLeft="0px"
+        android:paddingRight="5px" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/wbuser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="myweibo"
+                android:textColor="@color/blueviolet"
+                android:textSize="24px" >
+            </TextView>
+
+            <ImageView
+                android:id="@+id/wbimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5px"
+                android:layout_marginTop="3px"
+                android:layout_marginRight="15px"
+                android:layout_toLeftOf="@+id/wbtime" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/wbtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="#f7a200"
+                android:textSize="24px" >
+            </TextView>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/wbtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4px"
+            android:textColor="#424952"
+            android:textSize="22px" >
+        </TextView>
+		
+        <ImageView
+            android:id="@+id/wbthumimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+        </ImageView>
+        
+        
+        
+        <LinearLayout
+            android:id="@+id/bottom_weibo_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3px"
+            android:orientation="horizontal"
+            android:paddingLeft="0px"
+            android:paddingRight="5px" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+				
+                <TextView
+                    android:id = "@+id/wbSource"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="1px"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/blueviolet"
+                    android:textSize="20px" >
+                >
+                </TextView>>
+                
+                <ImageView
+                    android:id="@+id/wbfavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="1px"
+                    android:layout_toLeftOf="@+id/wbfavoriteshu"
+                    android:src="@drawable/weibo_favorite" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/wbfavoriteshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="1px"
+                    android:layout_toLeftOf="@+id/wbcomment"
+                    android:textColor="#f7a200"
+                    android:textSize="20px" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/wbcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="1px"
+                    android:layout_toLeftOf="@+id/wbcommentshu"
+                    android:src="@drawable/weibo_home_comment" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/wbcommentshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="1px"
+                    android:layout_toLeftOf="@+id/wbzhuanfa"
+                    android:textColor="#f7a200"
+                    android:textSize="20px" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/wbzhuanfa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5px"
+                    android:layout_marginTop="1px"
+                    android:layout_toLeftOf="@+id/wbzhuanfashu"
+                    android:src="@drawable/weibo_homeview_zhuanfa" >
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/wbzhuanfashu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="1px"
+                    android:textColor="#f7a200"
+                    android:textSize="20px" >
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

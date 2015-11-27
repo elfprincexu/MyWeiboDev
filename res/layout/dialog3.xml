@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dip" >
+
+    <LinearLayout
+        android:layout_width="320px"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <ImageView
+            android:id="@+id/user_selected_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="3px"
+            android:src="@drawable/user_icon" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/user_select_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3px"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.46"
+            android:gravity="center|bottom"
+            android:text="elfprincexu"
+            android:textSize="25px" >
+        </TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectLayout"
+        android:layout_width="320px"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <ImageButton
+            android:id="@+id/user_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8px"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/user_delete" >
+        </ImageButton>
+
+        <!-- <TextView -->
+        <!-- android:id="@+id/textView1" -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:layout_toRightOf="@+id/user_delete" -->
+        <!-- android:text="删除用户" -->
+        <!-- android:textColor="@color/red" -->
+        <!-- android:textSize="18px" /> -->
+
+        <ImageButton
+            android:id="@+id/user_goBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/user_goHome"
+            android:layout_centerInParent="true"
+            android:layout_margin="8px"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/go_back_home" />
+        <!-- <TextView -->
+        <!-- android:layout_width="wrap_content" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- android:layout_centerVertical="true" -->
+        <!-- android:layout_toLeftOf="@+id/user_goHome" -->
+        <!-- android:text="进入" -->
+        <!-- android:textColor="@color/blue" -->
+        <!-- android:textSize="18px" /> -->
+
+        <ImageButton
+            android:id="@+id/user_goHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="8px"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/go_into" />
+    </RelativeLayout>
+
+</LinearLayout>

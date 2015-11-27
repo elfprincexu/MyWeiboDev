@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright 2011 Sina.
+ *
+ * Licensed under the Apache License and Weibo License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.open.weibo.com
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/weibo_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3px"
+        android:background="@color/transparent" >
+
+        <ImageButton
+            android:id="@+id/btnGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="6dp"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/return_flash" />
+
+        <TextView
+            android:id="@+id/showUserName"
+            style="@style/main_tab_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/share_dialog_title"
+            android:textColor="#343434"
+            android:textSize="28px"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="6dp"
+            android:background="@drawable/btn_bg"
+            android:src="@drawable/weibo_fasong" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@color/transparent" >
+
+        <LinearLayout
+            android:id="@+id/llImage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#00ffffff"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlTotal"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" 
+                android:layout_margin="3dp"
+                android:background="@drawable/shape">
+
+                <LinearLayout
+                    android:id="@+id/add_pic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:paddingLeft="8px" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:gravity="center"
+                        android:src="@drawable/weibo_photo" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/add_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/add_pic"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:paddingLeft="8px" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_margin="8px"
+                        android:gravity="center"
+                        android:src="@drawable/weibo_location" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/at_friend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/add_location"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:paddingLeft="8px" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:gravity="center"
+                        android:src="@drawable/weibo_at" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/emotions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/at_friend"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:background="@drawable/btn_bg"
+                    android:paddingLeft="8px" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8px"
+                        android:gravity="center"
+                        android:src="@drawable/weibo_faces" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_text_limit_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="false"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/bg_delwords"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center" >
+
+                    <TextView
+                        android:id="@+id/tv_text_limit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="140"
+                        android:textColor="#333" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_delwords" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/flPic"
+                android:layout_width="256dp"
+                android:layout_height="256dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#00ffffff"
+                android:visibility="visible" >
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/image_background"
+                    android:src="@drawable/weibo_pic_default" />
+
+                <ImageView
+                    android:id="@+id/ivDelPic"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/del_pic" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/llImage"
+            android:layout_alignParentTop="true"
+            android:layout_margin="3px"
+            android:background="@color/transparent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/etEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/image_shape"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="@string/sayhello"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:isScrollContainer="true"
+                android:singleLine="false" >
+<!--                 <requestFocus /> -->
+            </EditText>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
